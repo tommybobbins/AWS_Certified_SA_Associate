@@ -86,7 +86,7 @@ Instance store- lost following power cycle. OK for reboot (as storage is actuall
 Amazon Data Lifecycle Manager - Manage EBS snapshots
 
 
-
+|-|-|-|
 ||Solid-state drives (SSD)|	Hard disk drives (HDD)|
 |-|-|-|-|-|
 |Volume type |	General Purpose SSD (gp2)|Provisioned IOPS SSD (io1)|	Throughput Optimized HDD (st1)	|Cold HDD (sc1)|
