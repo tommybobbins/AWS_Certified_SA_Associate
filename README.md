@@ -90,7 +90,7 @@ Amazon Data Lifecycle Manager - Manage EBS snapshots
 ||Solid-state drives (SSD)|	Hard disk drives (HDD)|
 |-|-|-|-|-|
 |Volume type |	General Purpose SSD (gp2)|Provisioned IOPS SSD (io1)|	Throughput Optimized HDD (st1)	|Cold HDD (sc1)|
-|Description|	General purpose SSD volume that balances price and performance for a wide variety of workloads|	Highest-performance SSD volume for mission-critical low-latency or high-throughput workloads|	Low-cost HDD volume designed for frequently accessed, throughput-intensive workloads|	Lowest cost HDD volume designed for less frequently accessed workloads
+|Description|	General purpose SSD volume that balances price and performance for a wide variety of workloads|	Highest-performance SSD volume for mission-critical low-latency or high-throughput workloads|	Low-cost HDD volume designed for frequently accessed, throughput-intensive workloads|	Lowest cost HDD volume designed for less frequently accessed workloads|
 Use cases	
 Recommended for most workloads
 
