@@ -10,11 +10,11 @@
 ## S3
 0 - 5TB object storage.
 
-URLs for static hosting
-========================
+### URLs for static hosting
 https://bobbins.s3amazonaws.com
 https://bobbins.eu-west-1.amazonaws.com
 
+### S3 Storage types
 |Type|Availability|Durability|Cost|
 |---|---|---|---|
 |S3 Standard | 99.99   | 99.999999999 (11*9s)  | $$$   | 
