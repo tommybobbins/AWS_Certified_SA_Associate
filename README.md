@@ -72,13 +72,13 @@ Appliance used to connect on-premise with cloud storage.
 - Cached Volumes -> Local Cache-> AWS S3 Backing
 - Tape Gateway. Virtual Tape Library (VTL)- iscsi devices
 
-# Athena and Macie
+## Athena and Macie
 
 - Athena - SQL on S3. Pay per query and per TB scanned
 - Quicksight. Visualise the reports
 - Macie. Identifies personally identifiable information. Uses machine learning to recognise PII in s3 cloudtrail logs
 
-# EBS
+## EBS
 
 - Magnetic - throughput optimised up to 500Mb/s
 - Instance store- lost following power cycle. OK for reboot (as storage is actually on hardware node)
@@ -96,3 +96,16 @@ Appliance used to connect on-premise with cloud storage.
 |Max IOPS per instance |	80,000|	80,000|	80,000|	80,000|
 |Max throughput per instance |	2,375 MB/s|	2,375 MB/s|	2,375 MB/s|	2,375 MB/s|
 |Dominant performance attribute|	IOPS|	IOPS|	MiB/s|	MiB/s|
+
+##ENI vs ENA vs EFA
+
+- *ENI* Elastic Network Interface is a NIC. Multiple ENI can be added.
+- *EN* Enhanced Networking. High performances networking on support instance types. SRV-IOV - High network throughput, low CPU overhead, high PPS, Low latency. 10->100Gb/s. Instance types, ENA better than VF
+- *EFA* Elastic Fabric Adapter is a network interface for Amazon EC2 instances that enables running applications requiring high levels of inter-node communications at scale on AWS. EFA are attached to an EC2 instance to accelerate high performance computing and machine learning applications.
+
+## Spot Instances
+
+- Bid on EC2 instance time based on market rates
+- Spot block - prevent spot instances from being switched off for 1-6 hours
+- Spot Fleet. A collection, or fleet, of Spot Instances, and optionally On-Demand Instances. Launch the number of spot instances and optionally on-demand instances to meet the target capacity.
+
