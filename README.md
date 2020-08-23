@@ -1,5 +1,7 @@
 # AWS_Certified_SA_Associate
 
+Notes are based on the fact that the Devops and SysOps exams have been passed, just the differences added.
+
 ## AWS Support Plans
 
 - *Basic*  - Free. Access to Customer service
@@ -132,4 +134,82 @@ Amazon FSx for Windows File Server provides fully managed Microsoft Windows file
 ## Amazon FSx For Lustre. 
 
 Used for Massive datasets and huge IOPS compared to EFS. Not Windows. You use Lustre for workloads where speed matters, such as machine learning, high performance computing (HPC), video processing, and financial modeling.
+
+## HPC 
+
+AWS Batch. Multi Node Parallel jobs and scheduled jobs. AWS Parallel cluster
+
+## RDS
+
+Cross Region Read replicas now available.
+
+## DynamoDB
+ 
+- NoSQL database built on SSDs and 3 AZs in one region
+- Eventually consistent Reads
+- Strongly consistent reads.
+- 4K Reads (2 eventually consistent, 1 strongly consistent)
+- 1K Writes
+- Units rounded to the nearest 4K/1K.
+- Also available in pay per request pricing, but pay more than provisioned pricing.
+- On demand backup and restore. Full backups anytime, 0 impact on performance. 
+- Consistent within seconds, retained until deleted. Operates in the same egion as source table.
+- Point in time recovery. 30 day retention.
+
+
+### DAX for DynanoDB 
+
+- HA, in memory cache
+- 10 x Performance improvement
+- Through cache to Dynamo DB
+
+### Dynamo DB Streams
+
+- Time ordered sequence of item level changes in a table retained for 24 hours inserts, updates and deletes. Can be used to trigger lambda functions.
+
+### Global Table
+
+- Replicate global table from one region to another using streams.
+- Multi master, multi-region.
+
+## Database migration service
+
+- Any <-> Any database migration. Dynamo DB is not supported source database.
+
+## AWS Directory Service
+
+- AWS Resources with on Prem ADS
+- AWS Management console with on premise AWS.
+- Group policies based on LDAP, DNS, Kerberos, NTLM authentication.
+- AWS Managed Microsoft AD - Windows Domain controllers in AWS.
+- AWS Manage some of the service - [ AZ Split, Patching, Rotation], Customer manages some of the service - [ Users, Groups, Scaling out DC Trusts, CA Federation ] 
+
+## Simple AD - Standard managed directory.
+
+- Based on Samba, suitable for <500 users. Cannot join existing on-premise AD as it does not support trust.
+
+## AD Connector
+
+- Direct Gateway proxy for on-prem AD avoids caching.
+
+## Cloud Directory
+
+- Directory store for development
+
+## Amazon Cognito User Pools
+
+- Managed user directory for SaaS applications, can authenticate against Facebook, Google etc.
+
+## IAM Policies
+
+- ARN. Unique ID for AWS Resolution. arm:partition:service:region:accountid_resource APSRAR.
+- Is a json document. Identity policy - attach to person. Resource Policy. Attach to a resource. 
+- Has no effect until it is attached.
+- Effect. Action. Resource. E.A.R
+- Deny > Allow
+- AWS Managed Policies (pre rolled) versus Customer Management policies (roll your own)
+- Inline policy, don't use unless temporary.
+- AWS Joins all applicable policies.
+- Permission boundaries, delegate admin to other users, prefvent privilege escalations, control maximum permissions on a object. This is used so that it's possible to have full administrator access from policy, but it only apply to S3 (permission boundary).
+
 
