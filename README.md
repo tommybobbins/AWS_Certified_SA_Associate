@@ -212,4 +212,70 @@ Cross Region Read replicas now available.
 - AWS Joins all applicable policies.
 - Permission boundaries, delegate admin to other users, prefvent privilege escalations, control maximum permissions on a object. This is used so that it's possible to have full administrator access from policy, but it only apply to S3 (permission boundary).
 
+## Resource Access Manager
 
+- Resource sharing with other Accounts.
+- App Mesh, Aurora, Code Build, EC2, EC2 image builder
+- Can launch EC2 instances in a shared subnet
+
+## AWS Single Sign-On
+
+- Dropbox, Github.
+- Sign into AWS using AWS Single Sign on 
+- AD Trust 
+- SAML can authorize against it (so can use this to auth 3rd party apps using AWS)
+- SAML is associated with Single sign on.
+
+## VPC
+
+- Associate a security Group with a subnet
+- Network ACL -> You can associate a network ACL with multiple subnets. However, a subnet can be associated with only one network ACL at a time. When you associate a network ACL with a subnet, the previous association is removed. Rules are numbered within the ACL low to high.
+
+## Global Accelerator
+- Speed up requests using Amazon backbone and smart routing. Cloudfront is HTTP/HTTPS only, Global Accelerator applies to TCP/UDP.
+
+## Gateway endpoint
+
+- Access AWS Resources without traversing IGW
+
+## AWS Private Link
+
+- Open service to another VPC without VPC Peering. Can Apply to many VPCs. Traffic from VPC0 can traverse VPC1, transit to another VPC2 (separate customer) using Private link, but no link required between VPC0 and VPC2.
+
+## AWS Transit Gateway
+
+- Hub for many VPC, is a hub and spoke service which can be used to simplify networ architecture.
+
+## VPN CloudHub
+
+Hub/spoke to allow VPNS in remote office to talk to each other
+
+## AWS Network costs
+
+Traffic is free within AZs, Cost between AZs, Cost between regions.
+
+
+## Load Balancers
+
+- Classic load balancers. HTTP/HTTPS only
+- Application load balancers. Path/Host detection, routing
+- Network Load balancers. High performance layer 4.
+- Application load balancers have lifecycle hooks which can wait before startup/termination.
+- X-Forwarded-For, Sticky sessions.
+- Cross-Zone load balancers, pass ELB traffic to zones
+
+## Autoscaling
+
+- Config templates [ AMI, Type, Key pair, Security Group]
+- Scaling options [ Maintain, scale manually, schedule, scale on demand, predictive scaling ]
+
+## Elastic Beanstalk
+
+- Compute service, full provisioning. Provisions on EC2 and autoscaling groups. Deploy containers.
+
+## On Premise
+
+- DMS- Database migration service
+- SMS - Server migration service
+- AWS Service Application Discovery service. Service map is build from ta running VM.
+- VM Import/Export.
