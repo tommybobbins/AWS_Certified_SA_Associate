@@ -86,12 +86,9 @@ Instance store- lost following power cycle. OK for reboot (as storage is actuall
 Amazon Data Lifecycle Manager - Manage EBS snapshots
 
 
-|---|---|---|---|---|
 ||Solid-state drives (SSD)||	Hard disk drives (HDD)||
-|---|---|---|---|---|
 |Volume type |	General Purpose SSD (gp2)|Provisioned IOPS SSD (io1)|	Throughput Optimized HDD (st1)	|Cold HDD (sc1)|
 |Description|	General purpose SSD volume that balances price and performance for a wide variety of workloads|	Highest-performance SSD volume for mission-critical low-latency or high-throughput workloads|	Low-cost HDD volume designed for frequently accessed, throughput-intensive workloads|	Lowest cost HDD volume designed for less frequently accessed workloads|
-|---|---|---|---|---|
 |Use cases| Recommended for most workloads System boot volumes - Virtual desktops - Low-latency interactive apps - Development and test environments | -Critical business applications that require sustained IOPS performance, or more than 16,000 IOPS or 250 MiB/s of throughput per volume -Large database workloads, such as: -MongoDB -Cassandra -Microsoft SQL Server -MySQL -PostgreSQL -Oracle -Streaming workloads requiring consistent, fast throughput at a low price -Big data -Data warehouses -Log processing Cannot be a boot volume | Throughput-oriented storage for large volumes of data that is infrequently accessed Scenarios where the lowest storage cost is important Cannot be a boot volume ||
 |API name|gp2|io1|st1|sc1|
 |Volume size	|1 GiB - 16 TiB|	4 GiB - 16 TiB|	500 GiB - 16 TiB|	500 GiB - 16 TiB|
@@ -100,4 +97,3 @@ Amazon Data Lifecycle Manager - Manage EBS snapshots
 |Max IOPS per instance |	80,000|	80,000|	80,000|	80,000|
 |Max throughput per instance |	2,375 MB/s|	2,375 MB/s|	2,375 MB/s|	2,375 MB/s|
 |Dominant performance attribute|	IOPS|	IOPS|	MiB/s|	MiB/s|
-|---|---|---|---|---|
