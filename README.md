@@ -279,3 +279,36 @@ Traffic is free within AZs, Cost between AZs, Cost between regions.
 - SMS - Server migration service
 - AWS Service Application Discovery service. Service map is build from ta running VM.
 - VM Import/Export.
+
+## SQS 
+
+- Used for decoupling applications.
+- 256KB Text
+- 2GB -> S3 can be retrieved from S3.
+- Standard and FIFO queues.
+- Visibility Timeout is the time the message is invisible in the queue after a read. This can lead to double messages if the reader drops the message. 12 hours is the maximum.
+- Long polling, holds onto a read request in the case of an empty queue to prevent the CPU of the polling process from being maxed out.
+- 14 day retention.
+- Delay
+- DelaySeconds. How long after a message is added to the queue before it can be  consumed.
+
+## SWF 
+
+- Actors
+- Workflow starters, initiate a workflow.
+- Decider- Control the flow of activity
+- Activity worker. Do the work.
+
+
+## SNS
+
+- Pub/Sub messages to a topic.
+- No polling. Push mechanism
+- PAYG
+
+## API Gateway
+
+- Think of this as a front door to lambda, dynamo db, EC2.
+- Define an API, Define resource (URL path), HTTP Methods, End points
+- API Caching. TTL for Common requests.
+- CORS - Cross object resource sharing. Origin policy cannot be read on remote resources.
