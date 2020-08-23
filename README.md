@@ -97,3 +97,4 @@ Amazon Data Lifecycle Manager - Manage EBS snapshots
 |Max IOPS per instance |	80,000|	80,000|	80,000|	80,000|
 |Max throughput per instance |	2,375 MB/s|	2,375 MB/s|	2,375 MB/s|	2,375 MB/s|
 |Dominant performance attribute|	IOPS|	IOPS|	MiB/s|	MiB/s|
+|---|---|---|---|---|
