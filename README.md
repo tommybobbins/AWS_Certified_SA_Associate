@@ -107,5 +107,29 @@ Appliance used to connect on-premise with cloud storage.
 
 - Bid on EC2 instance time based on market rates
 - Spot block - prevent spot instances from being switched off for 1-6 hours
-- Spot Fleet. A collection, or fleet, of Spot Instances, and optionally On-Demand Instances. Launch the number of spot instances and optionally on-demand instances to meet the target capacity.
+- Spot Fleet. A collection, or fleet, of Spot Instances, and optionally On-Demand Instances. Launch the number of spot instances and optionally on-demand instances to meet the target capacity. The request is fulfilled if there is capacity and cost matched.
+- Spot instance pools. Using multiple pools, can choose the size, the instance type and price.
+
+## EC2 Hibernate.
+
+- Similar to suspend for laptops. Memory is written to EBS and then suspended. When it is unsuspended, the memory is re-populated. Only works for <150GB RAM instances. Useful for pre-warming autoscaling groups.
+
+## EC Placement Groups
+
+- Cluster. Kept together for high IOPs  [ x x x x ]
+- Distributed/Spread. Separate racks/ AZ for HA. [ x ] [ x ] [ x ]
+- Partitioned (Spread Cluster). Clustered together, but clusters of servers spread over AZs/Racks [ x x x x ] [ x x x x ]
+
+## Amazon FSx for Windows Fileservers
+
+Amazon FSx for Windows File Server provides fully managed Microsoft Windows file servers, backed by a fully native Windows file system. Amazon FSx for Windows File Server has the features, performance, and compatibility to easily lift and shift enterprise applications to the AWS Cloud.
+
+- SMB (Not SAMBA)
+- AD users
+- ACLs
+- DFS
+
+## Amazon FSx For Lustre. 
+
+Used for Massive datasets and huge IOPS compared to EFS. Not Windows. You use Lustre for workloads where speed matters, such as machine learning, high performance computing (HPC), video processing, and financial modeling.
 
