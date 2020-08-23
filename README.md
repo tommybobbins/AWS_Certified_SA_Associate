@@ -80,10 +80,9 @@ Appliance used to connect on-premise with cloud storage.
 
 # EBS
 
-Cold
-Magnetic - throughput optimised up to 500Mb/s
-Instance store- lost following power cycle. OK for reboot (as storage is actually on hardware node)
-Amazon Data Lifecycle Manager - Manage EBS snapshots
+- Magnetic - throughput optimised up to 500Mb/s
+- Instance store- lost following power cycle. OK for reboot (as storage is actually on hardware node)
+- Amazon Data Lifecycle Manager - Manage EBS snapshots
 
 ||Solid-state drives (SSD)||	Hard disk drives (HDD)||
 |---|---|---|---|---|
