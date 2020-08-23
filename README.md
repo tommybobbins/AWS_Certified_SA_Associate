@@ -93,7 +93,7 @@ Amazon Data Lifecycle Manager - Manage EBS snapshots
 |API name|gp2|io1|st1|sc1|
 |Volume size	|1 GiB - 16 TiB|	4 GiB - 16 TiB|	500 GiB - 16 TiB|	500 GiB - 16 TiB|
 |Max IOPS per volume|	16,000 (16 KiB I/O) |	64,000 (16 KiB I/O) |	500 (1 MiB I/O)|	250 (1 MiB I/O)|
-|Max throughput per volume|	250 MiB/s |	1,000 MiB/s |	500 MiB/s|	|250 MiB/s|
+|Max throughput per volume|	250 MiB/s |	1,000 MiB/s |	500 MiB/s|	250 MiB/s|
 |Max IOPS per instance |	80,000|	80,000|	80,000|	80,000|
 |Max throughput per instance |	2,375 MB/s|	2,375 MB/s|	2,375 MB/s|	2,375 MB/s|
 |Dominant performance attribute|	IOPS|	IOPS|	MiB/s|	MiB/s|
