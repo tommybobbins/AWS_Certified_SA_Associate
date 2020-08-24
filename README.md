@@ -269,6 +269,43 @@ Traffic is free within AZs, Cost between AZs, Cost between regions.
 - Config templates [ AMI, Type, Key pair, Security Group]
 - Scaling options [ Maintain, scale manually, schedule, scale on demand, predictive scaling ]
 
+### Autoscaling Groups
+
+- Lifecycle Hooks puts instance into wait state before termination. Default 1 hour.
+
+### Scheduled Scaling
+
+- Scheduled action. Start time, new min, new max, new desired. One Shot / Recurring
+- Predictable load Pattern
+
+### Launch configuration (older)
+
+- Named document contains AMI, Instance type, ssh keypair, security group, instance profile, block device mapping, user data.
+
+### Launch template (new and better)
+
+- Named document contains AMI, Instance type, ssh keypair, security group, instance profile, block device mapping, user data. Can also use it for spinning up one-off EC2 instances or launching a spot fleet. It is more flexible. It is versioned.
+
+### Autoscaling options
+
+- ChangeInCapacity - add 2 when load increases
+- ExactCapacity - scale to 6
+- PercentageChangeInCapacity - Add 50%
+- Cooldown period. After scaling wait this long before taking further actions (covers spin up time)
+
+### Step scaling
+If demand rapidly increases
+
+- Lower Bound
+- Upper Bound
+- Adjustment Type
+- Amount to increase desired capacity
+- Warm up time.
+
+### Target Tracking
+
+Metric and Target value. Cloud Watch Alarm Created and scaling policy. CPU is good example. Scale out and Scale in Warm up time.
+
 ## Elastic Beanstalk
 
 - Compute service, full provisioning. Provisions on EC2 and autoscaling groups. Deploy containers.
@@ -383,9 +420,21 @@ Regional key managent service.
 
 Elastic Container Store (ECS. Manage clusters of EC2 Servers for containers. 
 Fargate - No EC2.
+Elastic Container Services - Can use Fargate for Servless containers.
 
 - *Cluster* logical collection of instances
 - *Task Definition* - similar to a dockerfiles
 - *Container Definition* - Controls CPU and Memory + Port Mapping
 - *Task* - Single running copy of container
 - *Service* - Provides Scaling Min/Max
+
+## EKS
+
+Elastic Kubernetes Services -Can use Fargate for Serverless Kubernetes
+
+## Redshift
+
+- Data warehousing.
+- Enhanced VPC Routing provides provides VPC resources access to redshift.
+
+
