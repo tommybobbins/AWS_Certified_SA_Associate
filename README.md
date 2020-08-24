@@ -371,8 +371,8 @@ Key Rotation, Key Policies
 ### AWS Owned CMK - Shared Basis across many accounts. Cannot be viewed
 
 
-|---|---|---|---|---|
 |Type of CMK|	Can view CMK metadata|	Can manage CMK	|Used only for my AWS account|	Automatic rotation|
+|---|---|---|---|---|
 |Customer managed CMK|	Yes|	Yes|	Yes|	Optional.| Every 365 days (1 year).|
 |AWS managed CMK|	Yes|	No|	Yes|	Required.| Every 1095 days (3 years).|
 |AWS owned CMK|	No|	No|	No|	Varies|
