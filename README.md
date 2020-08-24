@@ -370,3 +370,22 @@ Regional key managent service.
 |AWS managed CMK|	Yes|	No|	Yes|	Required.| Every 1095 days (3 years).|
 |AWS owned CMK|	No|	No|	No|	Varies|
 |---|---|---|---|---|
+
+## SAM
+
+Serverless Application Model
+CloudFormation Extension for Serverless functions, APIS, tABLES. 
+Supports all CloudFormation
+Run Serverless Applications Locally
+Packages Deploy using Code Deploy
+
+## ECS
+
+Elastic Container Store (ECS. Manage clusters of EC2 Servers for containers. 
+Fargate - No EC2.
+
+- *Cluster* logical collection of instances
+- *Task Definition* - similar to a dockerfiles
+- *Container Definition* - Controls CPU and Memory + Port Mapping
+- *Task* - Single running copy of container
+- *Service* - Provides Scaling Min/Max
