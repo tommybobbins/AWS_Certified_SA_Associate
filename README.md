@@ -376,3 +376,4 @@ Key Rotation, Key Policies
 |Customer managed CMK|	Yes|	Yes|	Yes|	Optional.| Every 365 days (1 year).|
 |AWS managed CMK|	Yes|	No|	Yes|	Required.| Every 1095 days (3 years).|
 |AWS owned CMK|	No|	No|	No|	Varies|
+|---|---|---|---|---|
