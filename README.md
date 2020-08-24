@@ -312,3 +312,67 @@ Traffic is free within AZs, Cost between AZs, Cost between regions.
 - Define an API, Define resource (URL path), HTTP Methods, End points
 - API Caching. TTL for Common requests.
 - CORS - Cross object resource sharing. Origin policy cannot be read on remote resources.
+
+## Kinesis
+
+### Kinesis Streams
+
+Producers->Stream->Kinesis Streams->Sharding->EC2 Consumers, DynamoDB, Redshift, S3, RDS
+Per shard performance. 5 transactions/second, 2MB/s, 1000 Record/second writes, 1MB/s writes. Increase the data capacity by increasing the shards.
+
+### Kinesis Firehose
+
+Producers-> Firehose lambda functions No persistence-> Redshift/S3/Elasticsearch
+
+### Analytics
+
+Analyse data on fly from either Streams or Firehose.
+
+## Web Identify Federation and Cognito
+
+Mobile Application services map to IAM role. Cognito Push Sync
+
+### User Pool - Authentication
+Sign up and Sign in for users. JSON web token (JWT)
+
+### Identify Pool - Authorization
+Temporary authorization to AWS Services.
+
+## Event Driven Applications
+
+Event Driven Architecture. PUB/SUB->SNS Topic Broadcast
+DLQ - Dead letter queue
+SNS uses dead letter queue
+SQS- > MaxReceiveCount
+Lamdba - Failed Asynchronous Invocation
+S3 Event Notification API -> SQS, SNS, lamdba.
+
+### Fanout
+PUB = SNS
+SUB = SQS1, SQS2, etc.
+
+S3 Events - PUT, REMOVE, Restored from Glacier, RRS Object Lost, Replication issues.
+
+## KMS 
+Regional key managent service.
+
+- Customer Master Key
+- S3 Objects, DB Password, API keys
+- Encrypt up to 4KB
+- Pay per Call
+- CloudTrail logs encryption
+
+### AWS Managed CMK.
+Used by default, free.
+
+### Customer Managed CMK
+Key Rotation, Key Policies
+
+### AWS Owned CMK - Shared Basis across many accounts. Cannot be viewed
+
+
+|---|---|---|---|---|
+|Type of CMK|	Can view CMK metadata|	Can manage CMK	|Used only for my AWS account|	Automatic rotation|
+|Customer managed CMK|	Yes|	Yes|	Yes|	Optional.| Every 365 days (1 year).|
+|AWS managed CMK|	Yes|	No|	Yes|	Required.| Every 1095 days (3 years).|
+|AWS owned CMK|	No|	No|	No|	Varies|
