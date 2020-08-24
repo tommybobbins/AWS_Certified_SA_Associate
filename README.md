@@ -373,11 +373,11 @@ Regional key managent service.
 
 ## SAM
 
-Serverless Application Model
-CloudFormation Extension for Serverless functions, APIS, tABLES. 
-Supports all CloudFormation
-Run Serverless Applications Locally
-Packages Deploy using Code Deploy
+- Serverless Application Model
+- CloudFormation Extension for Serverless functions, APIS, tABLES. 
+- Supports all CloudFormation
+- Run Serverless Applications Locally
+- Packages Deploy using Code Deploy
 
 ## ECS
 
