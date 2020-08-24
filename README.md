@@ -362,14 +362,7 @@ Regional key managent service.
 - Pay per Call
 - CloudTrail logs encryption
 
-### AWS Managed CMK.
-Used by default, free.
-
-### Customer Managed CMK
-Key Rotation, Key Policies
-
-### AWS Owned CMK - Shared Basis across many accounts. Cannot be viewed
-
+## KMS
 
 |Type of CMK|	Can view CMK metadata|	Can manage CMK	|Used only for my AWS account|	Automatic rotation|
 |---|---|---|---|---|
