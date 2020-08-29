@@ -104,6 +104,7 @@ Appliance used to connect on-premise with cloud storage.
 - *ENI* Elastic Network Interface is a NIC. Multiple ENI can be added.
 - *EN* Enhanced Networking. High performances networking on support instance types. SRV-IOV - High network throughput, low CPU overhead, high PPS, Low latency. 10->100Gb/s. Instance types, ENA better than VF
 - *EFA* Elastic Fabric Adapter is a network interface for Amazon EC2 instances that enables running applications requiring high levels of inter-node communications at scale on AWS. EFA are attached to an EC2 instance to accelerate high performance computing and machine learning applications.
+- *ENI* attach.  You can attach a network interface to an instance when it's running (hot attach), when it's stopped (warm attach), or when the instance is being launched (cold attach). 
 
 ## Spot Instances
 
