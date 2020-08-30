@@ -99,7 +99,7 @@ Appliance used to connect on-premise with cloud storage.
 |Max throughput per instance |	2,375 MB/s|	2,375 MB/s|	2,375 MB/s|	2,375 MB/s|
 |Dominant performance attribute|	IOPS|	IOPS|	MiB/s|	MiB/s|
 
-##ENI vs ENA vs EFA
+## ENI vs ENA vs EFA
 
 - *ENI* Elastic Network Interface is a NIC. Multiple ENI can be added.
 - *EN* Enhanced Networking. High performances networking on support instance types. SRV-IOV - High network throughput, low CPU overhead, high PPS, Low latency. 10->100Gb/s. Instance types, ENA better than VF
