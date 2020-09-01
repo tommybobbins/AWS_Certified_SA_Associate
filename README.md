@@ -245,7 +245,7 @@ Cross Region Read replicas now available.
 
 ## AWS Transit Gateway
 
-- Hub for many VPC, is a hub and spoke service which can be used to simplify networ architecture.
+- Hub for many VPC, is a hub and spoke service which can be used to simplify network architecture.
 
 ## VPN CloudHub
 
