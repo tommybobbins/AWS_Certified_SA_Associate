@@ -154,7 +154,7 @@ Cross Region Read replicas now available.
 - Units rounded to the nearest 4K/1K.
 - Also available in pay per request pricing, but pay more than provisioned pricing.
 - On demand backup and restore. Full backups anytime, 0 impact on performance. 
-- Consistent within seconds, retained until deleted. Operates in the same egion as source table.
+- Consistent within seconds, retained until deleted. Operates in the same region as source table.
 - Point in time recovery. 30 day retention.
 
 
